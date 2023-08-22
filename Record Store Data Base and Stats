@@ -1,0 +1,25 @@
+--Create a Record Store database
+
+CREATE TABLE record_store (ID integer primary key, Album TEXT, Name TEXT, Genre Text, Year INTEGER, Price INTEGER);
+
+Insert Into Record_store Values(1, 'The Stranger','Billy Joel', 'Contemporary', 1977, 30 );
+Insert Into Record_store values(2, 'Igor','Tyler the Creator', 'Hip-Hop', 2019, 32);
+insert Into Record_store values (3, 'Frank Ocean', 'Blonde', 'R&B', 2016, 20);
+Insert Into Record_store values (4, 'Bewitched', 'Laufey', 'Jazz', 2023, 45);
+Insert Into Record_store values (5, 'Never Too Much', 'Luther Vandross', 'R&B', 1981, 22);
+Insert Into Record_store Values (6, 'The Dip Delivers', 'The Dip', 'R&B', 2019, 43);
+Insert Into Record_store Values (7, 'Invitation to Hers', 'Hers' , 'Indie',2018,33);
+Insert Into Record_store Values (8, 'the 20/20 Experience', 'Justin Timberlake', 'Pop', 2013,15);
+Insert Into Record_store Values ( 9, 'Stankonia', 'Outkast', 'Hip-Hop', 2000, 24);
+Insert Into Record_store Values (10, 'An Evening With Silk Sonic', 'Silk Sonic', 'R&B' ,2021, 34);
+Insert Into Record_store Values (11, '52nd Street', "Billy Joel", 'Rock', 1978, 43);
+Insert Into Record_store Values (12, 'The Marshall Mathers LP','Eminem', 'Rap' , 2000, 44);
+Insert Into Record_store Values (13, 'Confessions', 'Usher', 'Hip-Hop', 2004, 22);
+Insert Into Record_store Values (14, 'Destineys Child', 'Destineys Child', 'R&B', 1998, 32);
+Insert Into Record_store Values (15, 'Oops!...I Did It Again', 'Britney Spears', 'Pop', 2000, 25);
+
+--display the database ordered by price. 
+SELECT * FROM record_store order by Price desc;
+
+--What is the average price of records sorted by genres of music?
+SELECT genre, AVG(Price) from record_store group by genre;
